@@ -505,9 +505,9 @@ func (sc *serviceSource) extractNodePortTargets(svc *v1.Service) (endpoint.Targe
 		}
 	}
 
-	if len(externalIPs) > 0 {
-		return externalIPs, nil
-	}
+//	if len(externalIPs) > 0 {
+//		return externalIPs, nil
+//	}
 
 	return internalIPs, nil
 }
