@@ -460,6 +460,7 @@ func (sc *serviceSource) extractNodePortTargets(svc *v1.Service) (endpoint.Targe
 		externalIPs endpoint.Targets
 		nodes       []*v1.Node
 		err         error
+		bool        useInternalIPs
 	)
 
 	switch svc.Spec.ExternalTrafficPolicy {
@@ -505,9 +506,16 @@ func (sc *serviceSource) extractNodePortTargets(svc *v1.Service) (endpoint.Targe
 		}
 	}
 
-//	if len(externalIPs) > 0 {
-//		return externalIPs, nil
-//	}
+	ignoreExternalIPs, ok := svc.Annotations[ignoreExternalIPsAnnotationKey]
+	log.Debugf("ignoreExternalIPs=%s", ignoreExternalIPs)
+	if ok && ignoreExternalIPs == "true" {
+		log.Debugf("use internal ips over external ips : %s", internalIPs)
+		return internalIPs, nil
+	}
+
+	if len(externalIPs) > 0 {
+		return externalIPs, nil
+	}
 
 	return internalIPs, nil
 }
