@@ -460,7 +460,6 @@ func (sc *serviceSource) extractNodePortTargets(svc *v1.Service) (endpoint.Targe
 		externalIPs endpoint.Targets
 		nodes       []*v1.Node
 		err         error
-		bool        useInternalIPs
 	)
 
 	switch svc.Spec.ExternalTrafficPolicy {
