@@ -1,6 +1,6 @@
 module github.com/kubernetes-incubator/external-dns
 
-go 1.12
+go 1.13
 
 require (
 	cloud.google.com/go v0.37.4
@@ -13,7 +13,7 @@ require (
 	github.com/aliyun/alibaba-cloud-sdk-go v0.0.0-20180828111155-cad214d7d71f
 	github.com/aws/aws-sdk-go v1.23.18
 	github.com/cenkalti/backoff v2.1.1+incompatible // indirect
-	github.com/cloudflare/cloudflare-go v0.0.0-20190102215809-0c85496d8730
+	github.com/cloudflare/cloudflare-go v0.10.1
 	github.com/cloudfoundry-community/go-cfclient v0.0.0-20190201205600-f136f9222381
 	github.com/coreos/bbolt v1.3.2 // indirect
 	github.com/coreos/etcd v3.3.10+incompatible
@@ -25,7 +25,7 @@ require (
 	github.com/digitalocean/godo v1.19.0
 	github.com/dnaeon/go-vcr v1.0.1 // indirect
 	github.com/dnsimple/dnsimple-go v0.14.0
-	github.com/exoscale/egoscale v0.11.0
+	github.com/exoscale/egoscale v0.18.1
 	github.com/ffledgling/pdns-go v0.0.0-20180219074714-524e7daccd99
 	github.com/go-resty/resty v1.8.0 // indirect
 	github.com/gobs/pretty v0.0.0-20180724170744-09732c25a95b // indirect
@@ -64,7 +64,7 @@ require (
 	github.com/smartystreets/gunit v1.0.2 // indirect
 	github.com/soheilhy/cmux v0.1.3 // indirect
 	github.com/spf13/cobra v0.0.3 // indirect
-	github.com/stretchr/testify v1.3.0
+	github.com/stretchr/testify v1.4.0
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20170815181823-89b8d40f7ca8 // indirect
 	github.com/transip/gotransip v5.8.2+incompatible
 	github.com/ugorji/go/codec v0.0.0-20190320090025-2dc34c0b8780 // indirect
